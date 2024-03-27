@@ -117,7 +117,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Sovol SV05 24-03-10" //24-03-10 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#define CUSTOM_MACHINE_NAME "Sovol SV05 24-03-27" //24-03-27 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -1337,7 +1337,7 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN //24-03-10
+//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN //24-03-27
 
 // Force the use of the probe for Z-axis homing
 #define USE_PROBE_FOR_Z_HOMING //24-03-06
@@ -1742,7 +1742,7 @@
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR true	//24-03-06
 #define INVERT_Y_DIR true	//24-03-06
-#define INVERT_Z_DIR false	//24-03-10
+#define INVERT_Z_DIR true	//24-03-27
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
 //#define INVERT_K_DIR false
