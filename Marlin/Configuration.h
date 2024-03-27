@@ -1,7 +1,7 @@
 /**
  * Marlin 3D Printer Firmware
  * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
- * ALTS 24-03-06 24-03-07 (bugfix update 03-08)24-03-10 ???? ####(future query items)
+ * ALTS 24-03-06 24-03-07 (bugfix update 03-08)24-03-10 TMC24-03-27 ???? ####(future query items)
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
  *
@@ -1764,7 +1764,7 @@
 
 // @section homing
 
-//#define NO_MOTION_BEFORE_HOMING // Inhibit movement until all axes have been homed. Also enable HOME_AFTER_DEACTIVATE for extra safety.
+#define NO_MOTION_BEFORE_HOMING //24-03-27 Inhibit movement until all axes have been homed. Also enable HOME_AFTER_DEACTIVATE for extra safety.
 #define HOME_AFTER_DEACTIVATE     //24-03-06 Require rehoming after steppers are deactivated. Also enable NO_MOTION_BEFORE_HOMING for extra safety.
 
 /**
@@ -1784,8 +1784,8 @@
 
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
-#define X_HOME_DIR -1
-#define Y_HOME_DIR -1
+#define X_HOME_DIR 1 //24-03-27
+#define Y_HOME_DIR 1 //24-03-27
 #define Z_HOME_DIR -1
 //#define I_HOME_DIR -1
 //#define J_HOME_DIR -1
@@ -1816,10 +1816,10 @@
 #define Y_BED_SIZE 235	//24-03-06####
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
-#define X_MIN_POS -5	//24-03-10####
-#define Y_MIN_POS -7	//24-03-10####
+#define X_MIN_POS 0	//24-03-27 was -5  ####
+#define Y_MIN_POS 0	//24-03-27 was -7 ####
 #define Z_MIN_POS 0
-#define X_MAX_POS X_BED_SIZE + 25 //24-03-10####
+#define X_MAX_POS X_BED_SIZE //24-03-27 was + 25 //24-03-10####
 #define Y_MAX_POS Y_BED_SIZE
 #define Z_MAX_POS 250	//24-03-06
 //#define I_MIN_POS 0
